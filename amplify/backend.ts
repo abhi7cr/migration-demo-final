@@ -35,7 +35,7 @@ userPool.addClient("eu-central-1_rUiA1hKy1", {
     refreshTokenValidity: Duration.days(30)
 })
 const s3Bucket = backend.storage.resources.cfnResources.cfnBucket;
-// s3Bucket.bucketName = "testmigrationdemofin91eee89a044d4822a9b0892105ee435b-main";
+s3Bucket.bucketName = "testmigrationdemofin91eee89a044d4822a9b0892105ee435b-main";
 s3Bucket.applyRemovalPolicy(RemovalPolicy.RETAIN, { applyToUpdateReplacePolicy: true })
 s3Bucket.bucketEncryption = {
     serverSideEncryptionConfiguration: [
